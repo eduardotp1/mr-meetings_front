@@ -4,7 +4,7 @@ export default window.groupRegister = {
         const headers = new Headers();
         headers.append('Content-Type', 'application/json');
 
-        fetch("http://localhost:3001/registerGroup", {
+        fetch("https://aqueous-river-53090.herokuapp.com/registerGroup", {
             method: 'POST',
             headers,
             body : JSON.stringify({
