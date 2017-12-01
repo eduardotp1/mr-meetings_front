@@ -4,7 +4,7 @@ export default window.groupRegister = {
         const headers = new Headers();
         headers.append('Content-Type', 'application/json');
 
-        fetch("https://aqueous-river-53090.herokuapp.com/registerGroup", {
+        fetch("https://mr-meetings-back.herokuapp.com/registerGroup", {
             method: 'POST',
             headers,
             body : JSON.stringify({
