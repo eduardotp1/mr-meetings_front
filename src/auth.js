@@ -23,7 +23,7 @@ export default window.auth = {
         const headers = new Headers();
         headers.append('Content-Type', 'application/json');
 
-        fetch(baseUrl + "register", {
+        fetch("https://mr-meetings-back.herokuapp.com/register", {
             method: 'POST',
             headers,
             body : JSON.stringify({
