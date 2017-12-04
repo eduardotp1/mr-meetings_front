@@ -237,15 +237,15 @@ class GroupForm extends Component {
           console.log(event1);
           console.log(event2);
         this.setState({suggestions: null});
-        var newList = []
-        if(this.state.users !== null){
-            for (var i = 0; i<this.state.users.length; i++){
-                if(String(this.state.users[i]).includes(value)){
-                    newList.push(this.state.users[i]);
-                    }
-            }
-            this.setState({suggestions: newList});
+        var newList = [];
+        for (var i = 0; i<this.state.users.length; i++){
+            if(String(this.state.users[i]).includes(value)){
+                newList.push(this.state.users[i]);
+                }
         }
+        this.setState({suggestions: newList});
+
+        
       };
 
 
