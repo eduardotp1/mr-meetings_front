@@ -4,7 +4,7 @@ export default window.groupRegister = {
         const headers = new Headers();
         headers.append('Content-Type', 'application/json');
 
-        fetch("https://mr-meetings-back.herokuapp.com/registerGroup", {
+        fetch("http://localhost:3001/registerGroup", {
             method: 'POST',
             headers,
             body : JSON.stringify({
@@ -24,7 +24,7 @@ export default window.groupRegister = {
         const headers = new Headers();
         // headers.append('Content-Type', 'application/json');
 
-        fetch("https://mr-meetings-back.herokuapp.com/user", {
+        fetch("http://localhost:3001/user", {
             method: 'GET'
         }).then((response) => {
             var data = response.json().then((data) => {

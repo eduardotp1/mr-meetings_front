@@ -1,10 +1,10 @@
 export default window.auth = {
     updateSchedule:(day1, start1, stop1, action1, callback)=>{
-        const baseUrl ='https://mr-meetings-back.herokuapp.com/';
+        const baseUrl ='http://localhost:3001';
         const headers = new Headers();
         headers.append('Content-Type', 'application/json');
 
-        fetch(baseUrl + 'updateSchedule', {
+        fetch(baseUrl + '/updateSchedule', {
             method: 'POST',
             headers,
             body : JSON.stringify({
@@ -23,11 +23,11 @@ export default window.auth = {
     },
 
     getEvents:(callback)=>{
-        const baseUrl ='https://mr-meetings-back.herokuapp.com/';
+        const baseUrl ='http://localhost:3001';
         const headers = new Headers();
         headers.append('Content-Type', 'application/json');
 
-        fetch(baseUrl + 'findSchedule', {
+        fetch(baseUrl + '/findSchedule', {
             method: 'POST',
             headers,
             body : JSON.stringify({
