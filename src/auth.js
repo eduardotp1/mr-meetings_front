@@ -1,6 +1,6 @@
 export default window.auth = {
     login:(name1, password1, callback)=>{
-        const baseUrl ='https://mr-meetings-back.herokuapp.com/';
+        const baseUrl ='https://mr-meetings-back.herokuapp.com';
         const headers = new Headers();
         headers.append('Content-Type', 'application/json');
 
