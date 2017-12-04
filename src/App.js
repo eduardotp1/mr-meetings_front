@@ -54,9 +54,12 @@ class App extends Component {
   }
 
   registerRequest = () => {
+    console.log("REQUESTANDO A REGISTERACAO DOS BANG");
     auth.register(this.state.textFields.email, this.state.textFields.password, this.state.textFields.name,(result) => {
       console.log(result.name);
+      
       localStorage.setItem("id", result);
+      console.log(result)
       this.setState({auth: localStorage.getItem("id")});
       
     })
@@ -132,7 +135,7 @@ class App extends Component {
       marginLeft: '5%'
   }
 
-  if (this.state.auth === null){
+  if (this.state.auth === null || this.state.auth === 'undefined'){
     return (
       <div className="App">
         <MuiThemeProvider>

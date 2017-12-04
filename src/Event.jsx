@@ -8,7 +8,7 @@ import SvgIconFace from 'material-ui/svg-icons/action/face';
 import {blue300, indigo900, amber400} from 'material-ui/styles/colors';
 import store from './store';
 
-import {amber500,amber700, blue500, grey300, grey400, grey200, grey600, grey800, grey900, grey500, grey50} from 'material-ui/styles/colors';
+import {amber500,amber700, blue500, blue400, blue700, grey300, grey400, grey200, grey600, grey800, grey900, grey500, grey50} from 'material-ui/styles/colors';
 
 
 
@@ -20,7 +20,8 @@ class Event extends Component {
     this.state = {
       error : '',   
       hidden: false,
-      startTime: this.props.startTime
+      startTime: this.props.startTime,
+      reunion: this.props.isReunion
     }
   }
 
@@ -51,11 +52,11 @@ class Event extends Component {
             <div>
                 {this.state.hidden ? null : 
             <Chip
-            backgroundColor={amber400}
+            backgroundColor={this.state.reunion? blue400:amber400}
             onRequestDelete={this.handleRequestDelete}
             onClick={this.handleTouchTap.bind(this)}
             style={styles.chip}>
-                <Avatar size={32} color={'black'} backgroundColor={amber700}>
+                <Avatar size={32} color={'black'} backgroundColor={this.state.reunion? blue700:amber700}>
                 </Avatar>
                 {this.props.startTime + ':00'} - {this.props.stopTime + ':00'}
             </Chip>} 
